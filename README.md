@@ -33,4 +33,4 @@
    > 4
    > 10
 
-1. Create a Pull Request in the description section add a small description for the solution applied for each method and screenshot of the breakpoint that you set. Remember to use markdown.
+1. Create a Pull Request in the description section add a small description for the solution applied for each method and screenshot of the breakpoint that you set. Try to use markdown if possible.
