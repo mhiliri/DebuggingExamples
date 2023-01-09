@@ -2,32 +2,18 @@
 
 using DebuggingExamples;
 
+var separator = new string('-', 10);
 DisplayPattern();
+PrintMessage(separator);
 PalydromeWords();
+PrintMessage(separator);
+PrintNames();
+PrintMessage(separator);
 var evenNumbers = DisplayEvenNumbers();
 
 foreach (var number in evenNumbers)
 {
     PrintMessage(number.ToString());
-}
-
-void StopHere() 
-{
-    PrintMessage("Hi!");
-}
-
-void PrintNumbers()
-{
-    var names = new List<string> { "Marta", "Maria","Bety","Luis","Juan", "Pedro"};
-    for (int i = 0; i < names.Count; i++)
-    {
-        PrintMessage(names[i]);
-    }
-}
-
-void PrintMessage(string message)
-{
-    Console.WriteLine(message);
 }
 
 void DisplayPattern()
@@ -44,7 +30,7 @@ void DisplayPattern()
 
 void PalydromeWords()
 {
-    var names = new List<string> { "ana", "MoM", "pop", "RedDer", "Reparer", "LeveL" };
+    var names = new List<string> { "ana", "Mom", "pop", "RedDer", "Reparer", "LeveL" };
 
     for (int i = 0; i < names.Count; i++)
     {
@@ -53,6 +39,20 @@ void PalydromeWords()
             PrintMessage(names[i]);
         }
     }
+}
+
+void PrintNames()
+{
+    var names = new List<string> { "Marta", "Maria","Bety","Luis","Juan", "Pedro"};
+    for (int i = 0; i < names.Count; i++)
+    {
+        PrintMessage(names[i]);
+    }
+}
+
+void PrintMessage(string message)
+{
+    Console.WriteLine(message);
 }
 
 bool VerifyWord(string word)
@@ -68,7 +68,7 @@ bool VerifyWord(string word)
 
 List<int> DisplayEvenNumbers()
 { 
-    var numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
+    var numbers = new List<int>() { 2,1, 3,2, 4, 5, 9, 7, 8,5};
     var evenNumbers = new List<int>();
 
     foreach (var number in numbers)
@@ -76,7 +76,7 @@ List<int> DisplayEvenNumbers()
         var module = number % 2;
         if (module == 0)
         {
-            evenNumbers.Add(module);
+            evenNumbers.Add(number);
         }
         return evenNumbers;
     }
