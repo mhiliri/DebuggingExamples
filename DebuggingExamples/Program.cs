@@ -20,12 +20,14 @@ void DisplayPattern()
 {
     var size = 4;
     var message = string.Empty;
-
+    var message2 = string.Empty;
     for (int i = 1; i <= size; i++)
     {
-        PrintMessage(message);
         message += i.ToString();
+        message2 += message + " ";
     }
+    PrintMessage(message2);
+
 }
 
 void PalydromeWords()
@@ -34,7 +36,7 @@ void PalydromeWords()
 
     for (int i = 0; i < names.Count; i++)
     {
-        if (VerifyWord(names[i]))
+        if (VerifyWord(names[i].ToLower()))
         {
             PrintMessage(names[i]);
         }
@@ -79,8 +81,6 @@ List<int> DisplayEvenNumbers()
         {
             evenNumbers.Add(number);
         }
-        return evenNumbers;
     }
-
     return evenNumbers;
 }
