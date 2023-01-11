@@ -10,3 +10,7 @@
 
 ![image 2](./DebuggingExamples/images/2.png)
 ![image 3](./DebuggingExamples/images/3.png)
+
+3. For requirement 3, breakpoint was added when the **"name"** == **"Luis"**.
+
+![image 4](./DebuggingExamples/images/4.png)
