@@ -59,6 +59,7 @@ void PrintMessage(string message)
 bool VerifyWord(string word)
 {
     var newWord = string.Empty;
+    word = word.ToLower();
     for (int i = word.Length - 1; i > -1; i--)
     {
         newWord += word[i];
@@ -79,7 +80,6 @@ List<int> DisplayEvenNumbers()
         {
             evenNumbers.Add(number);
         }
-        return evenNumbers;
     }
 
     return evenNumbers;
