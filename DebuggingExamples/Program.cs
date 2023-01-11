@@ -18,7 +18,7 @@ foreach (var number in evenNumbers)
 
 void DisplayPattern()
 {
-    var size = 4;
+    var size = 5;
     var message = string.Empty;
 
     for (int i = 1; i <= size; i++)
@@ -32,7 +32,7 @@ void PalydromeWords()
 {
     var names = new List<string> { "ana", "sun", "Mom", "moon", "pop", "river", "RedDer", "Reparer", "LeveL" };
 
-    for (int i = 0; i < names.Count; i++)
+    for (int i = 0; i < names.Count ; i++)
     {
         if (VerifyWord(names[i]))
         {
@@ -59,28 +59,25 @@ void PrintMessage(string message)
 bool VerifyWord(string word)
 {
     var newWord = string.Empty;
-    for (int i = word.Length - 1; i > -1; i--)
+    for (int i = word.Length -1 ; i >= 0; i--)
     {
         newWord += word[i];
     }
 
-    return newWord == word;
+    return newWord.Equals(word, StringComparison.InvariantCultureIgnoreCase);
 }
 
 List<int> DisplayEvenNumbers()
 {
     var numbers = new List<int>() { 2, 1, 3, 6, 4, 5, 9, 7, 10 };
     var evenNumbers = new List<int>();
-
     foreach (var number in numbers)
     {
-        var module = number % 2;
-        if (module == 0)
+        if (number % 2 == 0)
         {
             evenNumbers.Add(number);
         }
-        return evenNumbers;
     }
-
+    
     return evenNumbers;
 }
