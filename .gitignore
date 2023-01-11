@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# These files (launch.json and tasks.json) should not be tracked.
+.vscode
+
 # User-specific files
 *.rsuser
 *.suo
