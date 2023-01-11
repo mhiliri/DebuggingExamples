@@ -71,16 +71,13 @@ List<int> DisplayEvenNumbers()
 {
     var numbers = new List<int>() { 2, 1, 3, 6, 4, 5, 9, 7, 10 };
     var evenNumbers = new List<int>();
-
     foreach (var number in numbers)
     {
-        var module = number % 2;
-        if (module == 0)
+        if (number % 2 == 0)
         {
             evenNumbers.Add(number);
         }
-        return evenNumbers;
     }
-
+    
     return evenNumbers;
 }
