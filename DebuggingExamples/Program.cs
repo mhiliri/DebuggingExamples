@@ -59,12 +59,12 @@ void PrintMessage(string message)
 bool VerifyWord(string word)
 {
     var newWord = string.Empty;
-    for (int i = word.Length; i > -1; i--)
+    for (int i = word.Length -1 ; i >= 0; i--)
     {
         newWord += word[i];
     }
 
-    return newWord == word;
+    return newWord.Equals(word, StringComparison.InvariantCultureIgnoreCase);
 }
 
 List<int> DisplayEvenNumbers()
