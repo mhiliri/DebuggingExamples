@@ -14,3 +14,7 @@
 3. For requirement 3, breakpoint was added when the **"name"** == **"Luis"**.
 
 ![image 4](./DebuggingExamples/images/4.png)
+
+4. For the fourth request, the **"DisplayEvenNumbers"** method was updated so that it now prints the values of the request.
+
+![image 5](./DebuggingExamples/images/5.png)
