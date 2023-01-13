@@ -23,8 +23,8 @@ void DisplayPattern()
 
     for (int i = 1; i <= size; i++)
     {
-        PrintMessage(message);
         message += i.ToString();
+        PrintMessage(message);
     }
 }
 
