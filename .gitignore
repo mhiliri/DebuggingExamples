@@ -363,5 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Debugging Files
-#launch.json
-#tasks.json
+.vscode
