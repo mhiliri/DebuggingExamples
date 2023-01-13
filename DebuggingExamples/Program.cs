@@ -23,8 +23,8 @@ void DisplayPattern()
 
     for (int i = 1; i <= size; i++)
     {
-        PrintMessage(message);
         message += i.ToString();
+        PrintMessage(message);
     }
 }
 
@@ -64,7 +64,7 @@ bool VerifyWord(string word)
         newWord += word[i];
     }
 
-    return newWord == word;
+    return newWord.ToLower() == word.ToLower();
 }
 
 List<int> DisplayEvenNumbers()
@@ -79,7 +79,7 @@ List<int> DisplayEvenNumbers()
         {
             evenNumbers.Add(number);
         }
-        return evenNumbers;
+        // return evenNumbers;
     }
 
     return evenNumbers;
