@@ -18,7 +18,7 @@ foreach (var number in evenNumbers)
 
 void DisplayPattern()
 {
-    var size = 4;
+    var size = 5;
     var message = string.Empty;
 
     for (int i = 1; i <= size; i++)
@@ -64,7 +64,7 @@ bool VerifyWord(string word)
         newWord += word[i];
     }
 
-    return newWord == word;
+    return newWord.ToLower() == word.ToLower();
 }
 
 List<int> DisplayEvenNumbers()
@@ -78,9 +78,7 @@ List<int> DisplayEvenNumbers()
         if (module == 0)
         {
             evenNumbers.Add(number);
-        }
-        return evenNumbers;
+        }        
     }
-
     return evenNumbers;
 }
