@@ -64,7 +64,7 @@ bool VerifyWord(string word)
         newWord += word[i];
     }
 
-    return newWord == word;
+    return newWord.ToLower() == word.ToLower();
 }
 
 List<int> DisplayEvenNumbers()
