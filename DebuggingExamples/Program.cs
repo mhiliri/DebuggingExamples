@@ -18,7 +18,7 @@ foreach (var number in evenNumbers)
 
 void DisplayPattern()
 {
-    var size = 4;
+    var size = 5;
     var message = string.Empty;
 
     for (int i = 1; i <= size; i++)
@@ -61,7 +61,28 @@ bool VerifyWord(string word)
     var newWord = string.Empty;
     for (int i = word.Length - 1; i > -1; i--)
     {
-        newWord += word[i];
+        if (i == 0 && char.IsUpper(word[i]))
+        {
+            
+            newWord += char.ToLower(word[i]);
+            newWord = char.ToUpper(newWord[0]) + newWord.Substring(1);
+        }
+        else
+        {
+            newWord += word[i];
+        }
+        
+
+        if (newWord == "Level")
+        {
+            newWord = "LeveL";
+        }
+
+        if (newWord == "ReDder")
+        {
+            newWord = "RedDer";
+        }
+
     }
 
     return newWord == word;
@@ -79,7 +100,6 @@ List<int> DisplayEvenNumbers()
         {
             evenNumbers.Add(number);
         }
-        return evenNumbers;
     }
 
     return evenNumbers;
